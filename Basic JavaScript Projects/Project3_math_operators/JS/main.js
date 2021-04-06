@@ -23,3 +23,25 @@ function more_Math()    {
     document.getElementById("Math5").innerHTML = "1 plus 2, multiplied by 10, "+
     "divided in half and then subtracted by 5 equals " + simple_Math;
 }
+
+function modulus_Operator() {
+    var simple_Math = 25 % 6;
+    document.getElementById("Math6").innerHTML = "When you divide 25 by 6 you have a remainder of: " + simple_Math;
+}
+
+function negation_Operator()    {
+    var x = 10;
+    document.getElementById("Math7").innerHTML = -x;
+}
+
+function increment_Operator()   {
+    var X =5;
+    X++;
+    document.write(X);
+}
+
+function decrement_Operator()   {
+    var Y = 5.25;
+    Y--;
+    document.write(Y);
+}
