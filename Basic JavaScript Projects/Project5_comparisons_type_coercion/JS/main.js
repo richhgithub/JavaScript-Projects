@@ -30,3 +30,34 @@ document.write(10 == 10);   //true
 
 document.write(3 == 11);    //false
 
+X = 10;
+Y = 10;
+document.write(X === Y);    //=== true
+
+X = 72;
+Y = "82";
+document.write(X === Y);    //=== false
+
+X = 82;
+Y = "82";
+document.write(X === Y);    //=== false
+
+X = 9;
+Y = 10;
+document.write(X === Y);    //=== false
+
+document.write(5 > 2 && 10 >4); //&& true
+
+document.write(5 > 10 && 10 > 4);   //&& false
+
+document.write(5 > 10 || 10 > 4);   //|| true
+
+document.write(5 > 10 || 10 > 20);  //|| false
+
+function not_Function() {
+    document.getElementById("Not").innerHTML = !(5 > 10);   //!(not) true
+}
+
+function not2_Function() {
+    document.getElementById("Not2").innerHTML = !(20 > 10);  //!(not) false
+}
