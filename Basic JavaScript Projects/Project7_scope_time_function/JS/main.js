@@ -20,7 +20,7 @@ function Add_numbers_2()    {
 Add_numbers_1();
 Add_numbers_2();
 
-//console.log() method. should the error "X is not defined"
+//console.log() method. should the error "X is not defined." Note: Need to comment out the global var on line 2.
 function Add_numbers_1()    {
     var X = 10;
     console.log(15 + X);
@@ -30,3 +30,10 @@ function Add_numbers_2()    {
 }
 Add_numbers_1();
 Add_numbers_2();
+
+//Date().getHours() example
+function get_Date() {
+    if (new Date().getHours() < 18) {
+    document.getElementById("Greeting").innerHTML = "How are you today?";
+    }
+}
