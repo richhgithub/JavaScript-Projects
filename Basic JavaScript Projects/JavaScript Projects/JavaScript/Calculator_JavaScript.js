@@ -79,7 +79,7 @@ function Handle_Opeator(Next_Opeator)   {
      "=": (First_Operand, Second_Operand) => Second_Operand
  };
 
- function Calculator_Reset()    {}
+ function Calculator_Reset()    {
     Calculator.Display_Value = "0";
     Calculator.First_Operand = null;
     Calculator.Wait_Second_Operand = false;
