@@ -1,7 +1,7 @@
 // creates an object to keep track of values
 const Calculator = {
     // this is displays 0 on the screen
-    Display_Value: "0",
+    Display_Value: '0',
     // this will hold the first operand for any expressions, we set it to null for now
     First_Operand: null,
     // this checks whether or not the second operand has been input
@@ -21,7 +21,7 @@ function Input_Digit(digit) {
     }  else {
     // this overwrites Display_Value if the current value is 0
     // otherwise it adds onto it
-      Calculator.Display_Value = Display_Value === "0" ? digit : Display_Value + digit;
+      Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
     }
 }
 
@@ -72,50 +72,50 @@ function Handle_Opeator(Next_Opeator)   {
 
 
  const Perform_Calculation = {
-     "/": (First_Operand, Second_Operand) => First_Operand / Second_Operand,
-     "*": (First_Operand, Second_Operand) => First_Operand * Second_Operand,
-     "+": (First_Operand, Second_Operand) => First_Operand + Second_Operand,
-     "-": (First_Operand, Second_Operand) => First_Operand - Second_Operand,
-     "=": (First_Operand, Second_Operand) => Second_Operand
+     '/': (First_Operand, Second_Operand) => First_Operand / Second_Operand,
+     '*': (First_Operand, Second_Operand) => First_Operand * Second_Operand,
+     '+': (First_Operand, Second_Operand) => First_Operand + Second_Operand,
+     '-': (First_Operand, Second_Operand) => First_Operand - Second_Operand,
+     '=': (First_Operand, Second_Operand) => Second_Operand
  };
 
  function Calculator_Reset()    {
-    Calculator.Display_Value = "0";
+    Calculator.Display_Value = '0';
     Calculator.First_Operand = null;
     Calculator.Wait_Second_Operand = false;
     Calculator.operator = null;
  }
 // this function updates the screen with the contents of Display_Value
 function Update_Display()   {
-    const display = document.querySelector(".calculator-screen");
+    const display = document.querySelector('.calculator-screen');
     display.value = Calculator.Display_Value;
 }
 
 Update_Display();
 // this section monitors button clicks
-const keys = document.querySelector(".calculator-keys");
-keys.addEventListener("click", (event) =>   {
+const keys = document.querySelector('.calculator-keys');
+keys.addEventListener('click', (event) =>   {
     // the target variable is an object that represents the element
     // that was clicked
     const { target } = event;
     // if the element that was clicked on is not a button, exit the function
-    if (!target.matches("button"))  {
+    if (!target.matches('button'))  {
         return;
     }
 
-    if (target.classList.contains("operator"))  {
+    if (target.classList.contains('operator'))  {
         Handle_Opeator(target.value);
         Update_Display();
         return;
     }
 
-    if (target.classList.contains("decimal"))   {
+    if (target.classList.contains('decimal'))   {
     Input_Decimal(target.value);
     Update_Display();
      return;
     }
     // ensures that AC clears the numbers from the Calculator
-    if (target.classList.contains("all-clear")) {
+    if (target.classList.contains('all-clear')) {
         Calculator_Reset();
         Update_Display();
         return;
