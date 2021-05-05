@@ -1,23 +1,29 @@
 #menuBG {
-    width: 400px;
+    width: 600px;
     height: 470px;
     margin: 10px auto;
     background-color: rgb(139, 0, 0);   /* background-color for <body> */
     }
 
 #frmMenu    {
-    width: 400px;
+    width: 600px;
     height: 200px;
     }
 
 #totalPrice {
     width: 200px;
     height: 190px;
-    margin: 0 auto;
+    margin: 20px auto;
     float: right;
     }
 
 .left   {
+    width: 200px;
+    height: 200px;
+    float: left;
+    }
+
+.center {
     width: 200px;
     height: 200px;
     float: left;
@@ -45,12 +51,15 @@
 #btnOrder   {
     margin: 10px 0px 0px 100px;
     width: 100px;
-    height: 40px;   
+    height: 40px; 
+    display: block;
+    margin: 25px auto;  
     }
 
     h1 {
         font-family: Georgia, 'Times New Roman', Times, serif;  /* font-family for <h1> */
         color: #00ff00; /* color to <h1> */
+        text-align: center;
     }
 
     h3 {
